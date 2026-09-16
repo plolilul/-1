@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>데이터 입출력 프로그램</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>데이터 입출력 프로그램</h1>
+    <p class="subtitle">서버에 데이터를 저장하고 불러오는 웹 클라이언트입니다.</p>
+
+    <form id="item-form" class="item-form">
+      <input type="text" id="title" placeholder="제목" required />
+      <textarea id="content" placeholder="내용" rows="3"></textarea>
+      <button type="submit">저장</button>
+    </form>
+
+    <div id="status" class="status"></div>
+
+    <ul id="item-list" class="item-list"></ul>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
