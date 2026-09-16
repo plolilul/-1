@@ -3,7 +3,8 @@ const fs = require('fs');
 const path = require('path');
 
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 8000;
+const HOST = process.env.HOST || '0.0.0.0';
 const DATA_FILE = path.join(__dirname, 'data', 'items.json');
 
 app.use(express.json());
@@ -53,6 +54,6 @@ app.delete('/api/items/:id', (req, res) => {
   res.status(204).end();
 });
 
-app.listen(PORT, () => {
-  console.log(`서버 실행 중: http://localhost:${PORT}`);
+app.listen(PORT, HOST, () => {
+  console.log(`서버 실행 중: http://${HOST}:${PORT} (로컬: http://localhost:${PORT})`);
 });
